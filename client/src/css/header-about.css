@@ -1,0 +1,228 @@
+body {
+    background-color: #282c34; /* Replace with your desired background color */
+    color: white; /* Set text color to white */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Optional: Set a font-family */
+}
+.navbar-brand {
+    font-weight: bold; /* Make the text bold */
+    font-size: 1.25rem; /* Make the text slightly larger (adjust as needed) */
+    letter-spacing: 0.05em; /* Add some spacing between letters (optional) */
+    color: #ffffff; /* Set the text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change on hover */
+}
+
+.navbar-brand:hover {
+    color: #d1d1d1; /* Change to a slightly lighter color on hover (adjust as needed) */
+}
+.nav-item {
+    position: relative; /* Required to position the loader absolutely within the nav item */
+    padding-bottom: 1rem; /* Adjust padding to fit the thinner loader */
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.nav-link::after {
+    content: ''; /* Empty content for the loader */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Thinner loader height */
+    background-color: #ffffff; /* Color of the loader */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; /* Animation for the loader */
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.about-section {
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    gap: 20px; /* Space between columns */
+    align-items: center; /* Vertically center items */
+}
+
+
+.section-title,
+.slide-in-text,
+.section-description {
+    margin-bottom: 20px;
+}
+
+.section-description {
+    grid-column: 1 / span 2; /* Make description span both columns */
+    font-size: 1.2rem; /* Make the text a little larger */
+}
+
+.slide-in-container {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: space-between; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    margin-top: 20px;
+}
+
+.slide-in-text {
+    font-size: 1.5rem;
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 2s forwards;
+    animation-delay: 1s; /* Adjust this for delay between texts */
+    transition: color 0.3s ease; /* Optional transition for color */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide-in-text:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.slide-in-text:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.slide-in-text:nth-child(4) {
+    animation-delay: 6s;
+}
+
+.circular-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-image {
+    width: 300px; /* 2x the original size */
+    height: 300px; /* 2x the original size */
+    border-radius: 50%; /* Makes the photo circular */
+    object-fit: cover; /* Ensures the image covers the area */
+    border: 3px solid #fff; /* Optional: border color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: shadow effect */
+}
+
+.description-title {
+    font-size: 2rem; /* Thinner font size */
+    font-weight: 300; /* Lighter weight for a sleek look */
+    color: #17a2b8; /* Subtle blue color */
+    text-transform: uppercase; /* Make text uppercase for emphasis */
+    letter-spacing: 4px; /* Increase letter spacing */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.description-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Thin underline */
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradient underline */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+.name{
+    color: goldenrod;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.contact-button-container {
+    display: flex;
+    justify-content: center; /* Center the button */
+    margin-top: 30px; /* Space above the button */
+}
+
+.btn-contact {
+    background-color: #ffc107; /* Yellowish color */
+    color: #212529; /* Darker text color for contrast */
+    margin-bottom: 30px;
+    padding: 1px 7px; /* Button padding */
+    font-size: 1.2rem; /* Font size */
+    border-radius: 10px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn-contact:hover {
+    background-color: #e0a800; /* Slightly darker yellow on hover */
+    opacity: 80%;
+    color: #212529;
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+.about-details-section {
+    padding: 50px 0;
+    background-color: #222; /* Dark background */
+}
+
+.section-title {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.section-description {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff; /* White text for contrast */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+        text-align: center; /* Center-align text on small screens */
+    }
+
+    .section-description {
+        grid-column: 1; /* Ensure description spans the single column */
+    }
+    .circular-image{
+        width: 200px; /* Adjust the size for smaller screens */
+        height: 200px;
+    }
+}

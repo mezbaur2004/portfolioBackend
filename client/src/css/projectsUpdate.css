@@ -1,0 +1,124 @@
+/* projectsUpdate.css */
+
+.projects-update-wrapper {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projects-update-heading {
+    margin-bottom: 20px;
+}
+
+.projects-update-error-text {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.projects-update-form {
+    margin-bottom: 20px;
+}
+
+.projects-update-form-field {
+    margin-bottom: 15px;
+}
+
+.projects-update-form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.projects-update-form-input,
+.projects-update-form-textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.projects-update-form-textarea {
+    resize: vertical;
+}
+
+.projects-update-submit-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.projects-update-submit-button:disabled {
+    background-color: #ccc;
+}
+
+.projects-update-list {
+    margin-top: 20px;
+}
+
+.projects-update-list-heading {
+    margin-bottom: 10px;
+}
+
+.projects-update-no-projects {
+    color: #777;
+}
+
+.projects-update-card {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.projects-update-card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.projects-update-card-description {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.projects-update-card-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.projects-update-card-link:hover {
+    text-decoration: underline;
+}
+
+.projects-update-card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.projects-update-card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.projects-update-card-edit-button,
+.projects-update-card-delete-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.projects-update-card-edit-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.projects-update-card-delete-button {
+    background-color: #dc3545;
+    color: white;
+}

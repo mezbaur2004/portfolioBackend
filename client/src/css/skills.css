@@ -1,0 +1,52 @@
+.skills-section {
+    margin-top: 50px; /* Space between sections */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding around the section */
+}
+
+.section-title {
+    font-size: 2.5rem; /* Larger font size for the title */
+    font-weight: bold; /* Make the title bold */
+    text-align: center; /* Center the title */
+    margin-bottom: 30px; /* Space below the title */
+    position: relative; /* Position relative for the pseudo-element */
+}
+
+.section-title::before {
+    content: ''; /* Pseudo-element for decoration */
+    position: absolute;
+    bottom: -10px; /* Position below the title */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px; /* Width of the line */
+    height: 4px; /* Height of the line */
+    background-color: #ffc107; /* Line color */
+    border-radius: 2px; /* Rounded edges for the line */
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Gap between skill items */
+    justify-content: center; /* Center items horizontally */
+}
+
+.skill-item {
+    flex: 1 1 calc(50% - 20px); /* Two skills per row with a gap */
+    background-color: #333;
+    padding: 15px; /* Reduced padding */
+    margin: 10px; /* Space around each skill item */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.skill-item h3 {
+    margin-bottom: 10px;
+    color: #ffc107; /* Section title color */
+    font-size: 1.5rem; /* Slightly larger font size */
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
