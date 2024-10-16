@@ -23,7 +23,7 @@ app.use(express.urlencoded({limit: '50mb'}));
 const limiter= rateLimit({windowMs:15*60*1000,max:3000})
 app.use(limiter);
 
-let URL="mongodb://localhost:27017/PORTFOLIO"
+let URL="mongodb+srv://mezbaur2004:Proxima1@cluster0.vkg0b.mongodb.net/PORTFOLIO"
 let option={user:'',pass:"",autoIndex:true};
 mongoose.connect(URL,option).then((res)=>{
     console.log("Database Connected")
