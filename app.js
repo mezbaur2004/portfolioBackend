@@ -6,7 +6,7 @@ const helmet =require('helmet');
 const hpp =require('hpp');
 const cors =require('cors');
 const cookieParser = require('cookie-parser');
-const path = require("path");
+//const path = require("path");
 const mongoose=require('mongoose');
 
 app.use(cookieParser());
@@ -53,11 +53,14 @@ app.use((req, res, next) => {
 
 
 
-app.use(express.static('client/dist'));
+//app.use(express.static('client/dist'));
 
-app.get('*',function (req,res) {
-   res.sendFile(path.resolve(__dirname,'client','dist','index.html'))
-})
+
+// Add React Front End Routing
+
+//app.get('*',function (req,res) {
+//   res.sendFile(path.resolve(__dirname,'client','dist','index.html'))
+//})
 
 
 
