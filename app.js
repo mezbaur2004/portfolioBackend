@@ -4,19 +4,19 @@ const router =require('./src/route/api');
 const rateLimit =require('express-rate-limit');
 const helmet =require('helmet');
 const hpp =require('hpp');
-const cors =require('cors');
+// const cors =require('cors');
 const cookieParser = require('cookie-parser');
 //const path = require("path");
 const mongoose=require('mongoose');
 
 app.use(cookieParser());
 
-const corsOptions = {
-    origin: ['*'], 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: false,
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//     origin: ['*'], 
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     credentials: false,
+// };
+// app.use(cors(corsOptions));
 app.use(helmet({
     contentSecurityPolicy: false, // Disable Helmet's default CSP
 }));
