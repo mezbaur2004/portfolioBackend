@@ -12,9 +12,9 @@ const mongoose=require('mongoose');
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: ['http://localhost:5173', 'https://your-frontend-url.com'], 
+    origin: ['*'], 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
+    credentials: false,
 };
 app.use(cors(corsOptions));
 app.use(helmet({
