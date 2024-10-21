@@ -1,11 +1,11 @@
 const Dp = require('../model/DpModel');
 
-// GET: Fetch about info
+// GET: Fetch dp info
 exports.getDp = async (req, res) => {
     try {
         const dp = await Dp.findOne();
-        if (about) {
-            res.status(200).json(dp);
+        if (dp) {
+            res.status(200).json(dp); // Return the dp if found
         } else {
             res.status(404).json({ message: 'Dp section not found' });
         }
@@ -14,7 +14,7 @@ exports.getDp = async (req, res) => {
     }
 };
 
-// POST: Create or update about info
+// POST: Create or update dp info
 exports.createOrUpdateDp = async (req, res) => {
     try {
         const dpData = req.body;
@@ -27,7 +27,7 @@ exports.createOrUpdateDp = async (req, res) => {
         } else {
             // Create new document
             dp = new Dp(dpData);
-            await about.save();
+            await dp.save(); // Correctly save the dp document
             res.status(201).json(dp); // Use 201 for creation
         }
     } catch (error) {

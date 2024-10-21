@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
-const aboutSchema = new mongoose.Schema({
-    about: {
-        type: String,
+const dpSchema = new mongoose.Schema({
+    dp: {
+        type: String, // URL of the image
         required: true
     }
 }, { timestamps: true });
 
-const Dp = mongoose.model('Dp', aboutSchema);
+const Dp = mongoose.model('Dp', dpSchema);
 module.exports = Dp;
