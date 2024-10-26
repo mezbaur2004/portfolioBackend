@@ -2,8 +2,8 @@ const express =require('express');
 const app= new express();
 const router =require('./src/route/api');
 const rateLimit =require('express-rate-limit');
-const helmet =require('helmet');
-const hpp =require('hpp');
+//const helmet =require('helmet');
+//const hpp =require('hpp');
 // const cors =require('cors');
 const cookieParser = require('cookie-parser');
 //const path = require("path");
@@ -17,10 +17,10 @@ app.use(cookieParser());
 //     credentials: false,
 // };
 // app.use(cors(corsOptions));
-app.use(helmet({
-    contentSecurityPolicy: false, // Disable Helmet's default CSP
-}));
-app.use(hpp());
+// app.use(helmet({
+//     contentSecurityPolicy: false, // Disable Helmet's default CSP
+// }));
+// app.use(hpp());
 
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({limit: '50mb'}));
