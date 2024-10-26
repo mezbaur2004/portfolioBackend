@@ -3,6 +3,7 @@ const AboutController = require('../controller/AboutController');
 const DpController = require('../controller/DpController');
 const ProjectController = require('../controller/ProjectController');
 const UserController = require('../controller/UserController');
+const test=require('../controller/Test')
 const middleware = require('../middleware/AuthMiddleware');
 
 const router = express.Router();
@@ -23,5 +24,8 @@ router.delete('/projects/:id', middleware, ProjectController.deleteProject);
 
 // User routes
 router.post('/login', UserController.loginUser);
+
+//test
+router.get('/test',test.test)
 
 module.exports = router;
