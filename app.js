@@ -48,7 +48,7 @@ app.use((req, res, next) => {
         "default-src 'self'; " +
         "script-src 'self' https://cdn.jsdelivr.net https://kit.fontawesome.com; " +
         "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://ka-f.fontawesome.com; " +
-        "img-src 'self' https://simpauldesign.com https://*.facebook.com data:; " + // Added Facebook image domain
+        "img-src 'self' https://simpauldesign.com https://*.facebook.com https://i.ibb.co data:; " + // Added image domain
         "font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com; " +
         "connect-src 'self' https://ka-f.fontawesome.com;"
     );
