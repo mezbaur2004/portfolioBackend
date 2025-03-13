@@ -12,7 +12,7 @@ const mongoose=require('mongoose');
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: ['*'],
+    origin: ['*',"https://mezbaur.vercel.app"],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: false,
 };
