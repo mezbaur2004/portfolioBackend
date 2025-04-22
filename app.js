@@ -13,11 +13,13 @@ const mongoose=require('mongoose');
 app.use(cookieParser());
 
 const corsOptions = {
-    origin: ['*',"https://mezbaur.vercel.app"],
+    origin: ['http://localhost:5173', 'https://mezbaur.vercel.app','https://frontend-575t9b38v-mezbaur-are-rafis-projects.vercel.app/','*'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: false,
+    credentials: true // If you're using cookies/auth (can be false if not)
 };
+
 app.use(cors(corsOptions));
+
 app.use(helmet({
     contentSecurityPolicy: false, // Disable Helmet's default CSP
 }));
