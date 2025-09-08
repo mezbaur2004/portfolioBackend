@@ -12,13 +12,28 @@ const mongoose=require('mongoose');
 
 app.use(cookieParser());
 
+const allowedOrigins = [
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'https://mezbaur.vercel.app',
+    'https://frontend-575t9b38v-mezbaur-are-rafis-projects.vercel.app'
+];
+
 const corsOptions = {
-    origin: ['http://localhost:5173','http://localhost:5174', 'https://mezbaur.vercel.app','https://frontend-575t9b38v-mezbaur-are-rafis-projects.vercel.app/','*'],
+    origin: function (origin, callback) {
+        // allow requests with no origin (like Postman) or if origin is whitelisted
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('CORS not allowed for this origin: ' + origin));
+        }
+    },
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: false // If you're using cookies/auth (can be false if not)
+    credentials: false // no cookies needed for your case
 };
 
 app.use(cors(corsOptions));
+
 
 app.use(helmet({
     contentSecurityPolicy: false, // Disable Helmet's default CSP
