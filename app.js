@@ -33,7 +33,6 @@ const limiter= rateLimit({windowMs:15*60*1000,max:3000})
 app.use(limiter);
 
 let URL=process.env.URL
-// console.log(URL);
 let option={user:'',pass:"",autoIndex:true};
 mongoose.connect(URL,option).then((res)=>{
     console.log("Database Connected")
