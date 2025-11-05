@@ -26,6 +26,6 @@ router.delete('/projects/:id', middleware, ProjectController.deleteProject);
 router.post('/login', UserController.loginUser);
 
 //test
-router.get('/test',test.test)
+// router.get('/test',test.test)
 
 module.exports = router;
